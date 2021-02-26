@@ -1,1 +1,21 @@
 
+sudo firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.72.211.207" port protocol="udp" port="0-4999" accept"
+sudo firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.72.211.207" port protocol="udp" port="5000-65535" accept"
+
+sudo firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.72.211.207" port port="0-4999" protocol="tcp" accept"
+sudo firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.72.211.207" port port="5000-65535" protocol="tcp" accept"
+
+
+
+
+
+firewall-cmd --permanent  --add-port=8107/tcp
+firewall-cmd --permanent  --add-port=8106/tcp
+firewall-cmd --permanent  --add-port=7180/tcp
+firewall-cmd --permanent  --add-port=22/tcp
+firewall-cmd --permanent  --add-port=8088/tcp
+firewall-cmd --permanent  --add-port=21050/tcp
+firewall-cmd --permanent  --add-port=7051/tcp
+firewall-cmd --permanent  --add-port=7061/tcp
+firewall-cmd --permanent  --add-port=50070/tcp
+firewall-cmd --reload
